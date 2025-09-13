@@ -1,0 +1,14 @@
+[Unit]
+Description=BPJS Registration Analysis Streamlit App
+After=network.target
+
+[Service]
+Type=simple
+User=
+WorkingDirectory=/c/Users/IT/data science/Analisis NLP Add antroll
+Environment="PATH=/c/Users/IT/data science/Analisis NLP Add antroll/.venv/bin"
+ExecStart=/c/Users/IT/data science/Analisis NLP Add antroll/.venv/bin/streamlit run streamlit_app.py --server.port 8501
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
